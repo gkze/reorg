@@ -1,5 +1,7 @@
 # ReOrg - Reddit Organizer
 
+Uses [PRAW](https://praw.readthedocs.io/en/stable/index.html), so need to [set up configuration according to the docs](https://praw.readthedocs.io/en/stable/getting_started/configuration.html)
+
 * Lists all subscribed subs via
 
     ```bash

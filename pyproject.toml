@@ -1,0 +1,36 @@
+[project]
+name = "reorg"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "praw>=7.8.1",
+    "pyyaml>=6.0.2",
+    "rich>=14.0.0",
+    "typer>=0.15.2",
+    "xdg-base-dirs>=6.0.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project.scripts]
+reorg = "reorg.cli.main:main"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+fix = true
+preview = true
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D211", "D212"]
+
+
+[dependency-groups]
+dev = ["catppuccin>=2.4.1", "pdbpp>=0.10.3", "ptpython>=3.0.29"]
